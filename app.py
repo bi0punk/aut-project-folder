@@ -1,44 +1,54 @@
-
-menu_options = {
-    1: 'Option 1',
-    2: 'Option 2',
-    3: 'Option 3',
-    4: 'Option 1',
-    5: 'Option 2',
-    6: 'Option 3',
-    7: 'Option 1',
-    8: 'Option 2',
-    9: 'Option 3',
-    10: 'Exit',
-}
+def mostrar_menu(opciones):
+    print('Seleccione una opción:')
+    for clave in sorted(opciones):
+        print(f' {clave}) {opciones[clave][0]}')
 
 
-def print_menu():
-    for key in menu_options.keys():
-        print(key, '--', menu_options[key])
-def option1():
-    print('Handle option \'Option 1\'')
-def option2():
-    print('Handle option \'Option 2\'')
-def option3():
-    print('Handle option \'Option 3\'')
+def leer_opcion(opciones):
+    while (a := input('Opción: ')) not in opciones:
+        print('Opción incorrecta, vuelva a intentarlo.')
+    return a
+
+
+def ejecutar_opcion(opcion, opciones):
+    opciones[opcion][1]()
+
+
+def generar_menu(opciones, opcion_salida):
+    opcion = None
+    while opcion != opcion_salida:
+        mostrar_menu(opciones)
+        opcion = leer_opcion(opciones)
+        ejecutar_opcion(opcion, opciones)
+        print()
+
+
+def menu_principal():
+    opciones = {
+        '1': ('Opción 1', accion1),
+        '2': ('Opción 2', accion2),
+        '3': ('Opción 3', accion3),
+        '4': ('Salir', salir)
+    }
+
+    generar_menu(opciones, '4')
+
+
+def accion1():
+    print('Has elegido la opción 1')
+
+
+def accion2():
+    print('Has elegido la opción 2')
+
+
+def accion3():
+    print('Has elegido la opción 3')
+
+
+def salir():
+    print('Saliendo')
+
+
 if __name__ == '__main__':
-    while (True):
-        print_menu()
-        option = ''
-        try:
-            option = int(input(' Selecciona una opcion: '))
-        except:
-            print('Error. Please enter a number ...')
-        #Check what choice was entered and act accordingly
-        if option == 1:
-            option1()
-        elif option == 2:
-            option2()
-        elif option == 3:
-            option3()
-        elif option == 4:
-            print('Thanks message before exiting')
-            exit()
-        else:
-            print('Invalid option. Please enter a number between 1 and 4.')
+    menu_principal()

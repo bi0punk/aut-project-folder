@@ -16,14 +16,11 @@ menu_item = MenuItem("Menu Item")
 # Un elemento de función ejecuta una función de Python cuando se selecciona
 function_item = FunctionItem("Call a Python function", input, ["Enter an input"])
 
-
 # Un CommandItem ejecuta un comando de consola
 command_item = CommandItem("Run a console command",  "touch hello.txt")
 
-
 # Un SelectionMenu construye un menú a partir de una lista de cadenas
 selection_menu = SelectionMenu(["item1", "item2", "item3"])
-
 
 # Un SubmenuItem le permite agregar un menú (el menú de selección anterior, por ejemplo)
 # como submenú de otro menú

@@ -3,35 +3,33 @@ menu_options = {
     1: 'Option 1',
     2: 'Option 2',
     3: 'Option 3',
-    4: 'Exit',
+    4: 'Option 1',
+    5: 'Option 2',
+    6: 'Option 3',
+    7: 'Option 1',
+    8: 'Option 2',
+    9: 'Option 3',
+    10: 'Exit',
 }
 
 
 def print_menu():
     for key in menu_options.keys():
         print(key, '--', menu_options[key])
-
-
 def option1():
     print('Handle option \'Option 1\'')
-
-
 def option2():
     print('Handle option \'Option 2\'')
-
-
 def option3():
     print('Handle option \'Option 3\'')
-
-
 if __name__ == '__main__':
     while (True):
         print_menu()
         option = ''
         try:
-            option = int(input('Enter your choice: '))
+            option = int(input(' Selecciona una opcion: '))
         except:
-            print('Wrong input. Please enter a number ...')
+            print('Error. Please enter a number ...')
         #Check what choice was entered and act accordingly
         if option == 1:
             option1()

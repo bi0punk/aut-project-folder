@@ -1,17 +1,13 @@
 from consolemenu import *
 from consolemenu.items import *
-
 # Create the menu
 # Crea el menú
 menu = ConsoleMenu("Automatic Project Folder Creator", "Automatic creation of project structure dir")
-
 # Create some items
 # Crear algunos elementos
 
-
 # MenuItem es la clase base para todos los elementos, no hace nada cuando se selecciona
 menu_item = MenuItem("Menu Item")
-
 
 # Un elemento de función ejecuta una función de Python cuando se selecciona
 function_item = FunctionItem("Call a Python function", input, ["Enter an input"])
@@ -31,6 +27,5 @@ menu.append_item(function_item)
 menu.append_item(command_item)
 menu.append_item(submenu_item)
 
-# Finally, we call show to show the menu and allow the user to interact
 # Finalmente, llamamos show para mostrar el menú y permitir que el usuario interactúe
 menu.show()

@@ -1,31 +1,36 @@
-from consolemenu import *
-from consolemenu.items import *
-# Create the menu
-# Crea el menú
-menu = ConsoleMenu("Automatic Project Folder Creator", "Automatic creation of project structure dir")
-# Create some items
-# Crear algunos elementos
+import os
 
-# MenuItem es la clase base para todos los elementos, no hace nada cuando se selecciona
-menu_item = MenuItem("Menu Item")
 
-# Un elemento de función ejecuta una función de Python cuando se selecciona
-function_item = FunctionItem("Call a Python function", input, ["Enter an input"])
+def menu():
+	"""
+	Función que limpia la pantalla y muestra nuevamente el menu
+	"""
+	os.system('clear')  # NOTA para windows tienes que cambiar clear por cls
+	print("Selecciona una opción")
+	print("\t1 - primera opción")
+	print("\t2 - segunda opción")
+	print("\t3 - tercera opción")
+	print("\t9 - salir")
 
-# Un CommandItem ejecuta un comando de consola
-command_item = CommandItem("Run a console command",  "touch hello.txt")
 
-# Un SelectionMenu construye un menú a partir de una lista de cadenas
-selection_menu = SelectionMenu(["item1", "item2", "item3"])
+while True:
+	# Mostramos el menu
+	menu()
 
-# Un SubmenuItem le permite agregar un menú (el menú de selección anterior, por ejemplo)
-# como submenú de otro menú
-submenu_item = SubmenuItem("Submenu item", selection_menu, menu)
-# Una vez que hayamos terminado de crearlos, solo agregamos los elementos al menú
-menu.append_item(menu_item)
-menu.append_item(function_item)
-menu.append_item(command_item)
-menu.append_item(submenu_item)
+	# solicituamos una opción al usuario
+	opcionMenu = input("inserta un numero valor >> ")
 
-# Finalmente, llamamos show para mostrar el menú y permitir que el usuario interactúe
-menu.show()
+	if opcionMenu == "1":
+		print("")
+		input("Has pulsado la opción 1...\npulsa una tecla para continuar")
+	elif opcionMenu == "2":
+		print("")
+		input("Has pulsado la opción 2...\npulsa una tecla para continuar")
+	elif opcionMenu == "3":
+		print("")
+		input("Has pulsado la opción 3...\npulsa una tecla para continuar")
+	elif opcionMenu == "9":
+		break
+	else:
+		print("")
+		input("No has pulsado ninguna opción correcta...\npulsa una tecla para continuar")

@@ -7,7 +7,7 @@ def menu():
     print("\t3.- Simple Empty Flask Application with Virtual Environment (venv)")
     print("\t4.- Flask Aplication with V/e + Boostrap v4/v5")
     print("\t5.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Basic)")
-    print("\t6.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar")
+    print("\t6.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)")
     print("\t7-")
 
 
@@ -33,3 +33,9 @@ while(True):
     else:
         print("")
         input("no ha pulsado nada...\npulsa una tecla para continuar")
+
+
+def simple_script():
+    print("Creacíon de estructura de proyecto para script siemple")
+    __project_name__ = input("Ingrese el nombre del proyecto: ")
+    

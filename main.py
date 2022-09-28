@@ -17,8 +17,6 @@ def menu():
 
 
 
-
-
 while(True):
 
     menu()
@@ -40,7 +38,7 @@ while(True):
         break
     else:
         print("")
-        input("no ha pulsado nada...\npulsa una tecla para continuar")
+        input("Ingrese ...\npulsa una tecla para continuar")
 
 
 def simple_script():

@@ -19,8 +19,17 @@ class bcolors:
 
 
 
+""" print(bcolors.HEADER + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.OKBLUE + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.OKCYAN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.OKGREEN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.WARNING + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
-print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.ENDC}")
+print(bcolors.FAIL + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.ENDC + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.BOLD + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.UNDERLINE + "Warning: No active frommets remain. Continue?" + bcolors.ENDC) """
+
+""" print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.ENDC}") """
 
 
 
@@ -32,19 +41,28 @@ print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.E
 x = PrettyTable()
 def menu():
     print("\t\nSelecciona una opcion\n")
-    print("\t#############################################################################################")
+    print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
     wd = os.getcwd()
-    print(Fore.GREEN + "\t# Entorno de trabajo ")
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "Entorno de trabajo ")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
+    print("\t#")
     print("\t#")
 
     print("\t#")
-    print("\t1.- Simple Python Script")
-    print("\t2.- Simple Empty Flask Application")
-    print("\t3.- Simple Empty Flask Application with Virtual Environment (venv)")
-    print("\t4.- Flask Aplication with V/e + Boostrap v4/v5")
-    print("\t5.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Basic)")
-    print("\t6.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)")
-    print("\t7.- Salir")
+    print("\t   1.- Simple Python Script")
+    print("\t   2.- Simple Empty Flask Application")
+    print("\t   3.- Simple Empty Flask Application with Virtual Environment (venv)")
+    print("\t   4.- Flask Aplication with V/e + Boostrap v4/v5")
+    print("\t   5.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Basic)")
+    print("\t   6.- Flask Aplication with V/e + Boostrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)")
+    print("\t   7.- Salir")
 
 
 def simple_script():
@@ -56,7 +74,7 @@ def simple_script():
 while(True):
 
     menu()
-    opcionMenu = input("\n Opción >>> ")
+    opcionMenu = input("\n Opción >>>>>: ")
 
     if opcionMenu == "1":
         simple_script()

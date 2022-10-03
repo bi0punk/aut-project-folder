@@ -45,7 +45,7 @@ def menu():
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Path del archivo es:{}, el archivo se llama {}".format(path, filename))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Path del archivo es: {}, el archivo se llama {}".format(path, filename))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Sistema operativo detectado: " +str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Ruta Absoluta: " +str(wd))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)

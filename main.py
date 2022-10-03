@@ -2,7 +2,7 @@ import os
 from prettytable import PrettyTable
 from colorama import Fore, Back, Style
 import platform
-
+from art import* 
 
 
 class bcolors:
@@ -18,8 +18,7 @@ class bcolors:
 
 
 
-
-print(bcolors.HEADER + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+""" print(bcolors.HEADER + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.OKBLUE + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.OKCYAN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.OKGREEN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
@@ -27,40 +26,44 @@ print(bcolors.WARNING + "Warning: No active frommets remain. Continue?" + bcolor
 print(bcolors.FAIL + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.ENDC + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
 print(bcolors.BOLD + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
-print(bcolors.UNDERLINE + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
+print(bcolors.UNDERLINE + "Warning: No active frommets remain. Continue?" + bcolors.ENDC) """
 
 """ print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.ENDC}") """
 
 
 my_os = platform.system()
-print("OS in my system : ",my_os)
+
+
+if my_os == 'Linux':
+    aa = 'Sistema Linux......Version'
 
 
 x = PrettyTable()
 def menu():
-    print("\t\nSelecciona una opcion\n")
     print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
     wd = os.getcwd()
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "Entorno de trabajo ")
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    tprint("\tpython")
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Entorno de trabajo: ")
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Sistema operativo detectado: " +str(my_os))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Ruta Absoluta: " +str(wd))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print("\t#")
+    print("\t#")
+    print("\t#   1.- Simple Python Script")
+    print("\t#   2.- Simple Empty Flask Application")
+    print("\t#   3.- Simple Empty Flask Application with Virtual Environment (venv)")
+    print("\t#   4.- Flask Aplication with V/e + Bootstrap v4/v5")
+    print("\t#   5.- Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)")
+    print("\t#   6.- Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)")
+    print("\t#   7.- Salir")
     print("\t#")
     print("\t#")
     print("\t#")
-    print("\t#")
-    print("\t#")
-    print("\t#")
-    print("\t#")
-    print("\t#")
-    print("\t#")
-    print("\t#")
-
-    print("\t#")
-    print("\t   1.- Simple Python Script")
-    print("\t   2.- Simple Empty Flask Application")
-    print("\t   3.- Simple Empty Flask Application with Virtual Environment (venv)")
-    print("\t   4.- Flask Aplication with V/e + Bootstrap v4/v5")
-    print("\t   5.- Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)")
-    print("\t   6.- Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)")
-    print("\t   7.- Salir")
 
 
 def simple_script():

@@ -38,15 +38,19 @@ path, filename = os.path.split(absFilePath)
 
 x = PrettyTable()
 def menu():
+
+
     print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
     wd = os.getcwd()
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Sistema operativo detectado: " +str(my_os))
+    """ print(bcolors.OKGREEN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC) """
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "   Sistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Path del archivo es: {}, el archivo se llama {}".format(path, filename))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "   Entorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}" ", FILENAME: {}".format(path, filename))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "")
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Ruta Absoluta: " +str(wd))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print("\t#")

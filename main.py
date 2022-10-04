@@ -25,17 +25,12 @@ if my_os == 'Linux':
 
 
 wd = os.getcwd()
-""" print("working directory is ", wd) """
 
 filePath = __file__
-""" print("This script file path is ", filePath) """
+
 
 absFilePath = os.path.abspath(__file__)
-""" print("This script absolute path is ", absFilePath) """
-
 path, filename = os.path.split(absFilePath)
-""" print("Script file path is {}, filename is {}".format(path, filename)) """
-
 x = PrettyTable()
 def menu():
 
@@ -45,23 +40,21 @@ def menu():
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    """ print(bcolors.OKGREEN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC) """
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "\tSistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}".format(path))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print("\t#")
-    print("\t#")
-    print("\t#" + bcolors.WARNING  + "   1.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Python Script" + bcolors.ENDC) 
-    print("\t#" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application" + bcolors.ENDC)
-    print("\t#" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
-    print("\t#" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
-    print("\t#" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
-    print("\t#" + bcolors.WARNING  + "   6.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
-    print("\t#" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
-    print("\t#")
-    print("\t#")
-    print("\t#")
+    print(bcolors.HEADER + "\t#")
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   1.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Python Script" + bcolors.ENDC) 
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   6.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#")
+    print(bcolors.HEADER + "\t#")
+    print(bcolors.HEADER + "\t#" + bcolors.ENDC)
 
 
 def simple_script():

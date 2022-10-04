@@ -25,13 +25,13 @@ if my_os == 'Linux':
 
 
 wd = os.getcwd()
-print("working directory is ", wd)
+""" print("working directory is ", wd) """
 
 filePath = __file__
-print("This script file path is ", filePath)
+""" print("This script file path is ", filePath) """
 
 absFilePath = os.path.abspath(__file__)
-print("This script absolute path is ", absFilePath)
+""" print("This script absolute path is ", absFilePath) """
 
 path, filename = os.path.split(absFilePath)
 """ print("Script file path is {}, filename is {}".format(path, filename)) """
@@ -43,10 +43,10 @@ def menu():
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Sistema operativo detectado: " +str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Path del archivo es: {}, el archivo se llama {}".format(path, filename))
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Sistema operativo detectado: " +str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Ruta Absoluta: " +str(wd))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print("\t#")

@@ -46,12 +46,13 @@ def menu():
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     """ print(bcolors.OKGREEN + "Warning: No active frommets remain. Continue?" + bcolors.ENDC) """
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "   Sistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "\tSistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "   Entorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}" " FILENAME: {}".format(path, filename))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}" " FILENAME: {}".format(path, filename))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "\tMain File: {}".format(filename))
     """ print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "") """
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "   Ruta Absoluta    :    " +str(wd))
+    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + "\tRuta Absoluta    :    " +str(wd))
     print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
     print("\t#")
     print("\t#")

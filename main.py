@@ -1,3 +1,4 @@
+from ast import While
 import os
 from prettytable import PrettyTable
 from colorama import Fore, Back, Style
@@ -16,10 +17,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-
 my_os = platform.system()
-
-
 if my_os == 'Linux':
     aa = 'Sistema Linux......Version'
 
@@ -61,7 +59,17 @@ def simple_script():
     print("\tCreacíon de estructura de proyecto para script siemple")
     __project_name__ = input("Ingrese el nombre del proyecto: ")
     print("\tEl nombre del proyecto es " +str(__project_name__) )
-    print("\tIngrese la ruta en cual decea crear el proyecto \ si decea mantener esta ruta presione 'Y' ")
+    print("\tSi decea mantener esta ubicacion presione 'Y' ")
+    __mantener_ruta__ = input()
+    if __mantener_ruta__ == "Y" or "y":
+        try:
+            os.makedirs((__project_name__)+str('/aaaaaaaaaaaaaaaaaaaaaa/'))
+        except FileExistsError:
+            pass
+
+
+
+    While(False)
 
 
 

@@ -58,7 +58,7 @@ def menu():
 
 
 def simple_script():
-    print("\t SELECCION:Creacíon de estructura de proyecto para script siempleN")
+    print("\t Ha Seleccionado: Creación de estructura de proyecto para script simple")
     __project_name__ = input("Ingrese el nombre del proyecto: ")
     print("\t El nombre del proyecto es " +str(__project_name__) )
     print("\t Si decea mantener esta ubicacion presione 'Y' ")

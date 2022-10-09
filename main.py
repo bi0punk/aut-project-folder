@@ -51,6 +51,9 @@ def menu():
     print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
     print(bcolors.HEADER + "\t#")
     print(bcolors.HEADER + "\t#")
+    print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#")
+    print(bcolors.HEADER + "\t#")
     print(bcolors.HEADER + "\t#" + bcolors.ENDC)
 
 

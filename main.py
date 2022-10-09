@@ -23,7 +23,6 @@ if my_os == 'Linux':
 
 
 wd = os.getcwd()
-
 filePath = __file__
 
 
@@ -56,43 +55,40 @@ def menu():
 
 
 def simple_script():
-    print("\tCreacíon de estructura de proyecto para script siemple")
+    print("\t SELECCION:Creacíon de estructura de proyecto para script siempleN")
     __project_name__ = input("Ingrese el nombre del proyecto: ")
-    print("\tEl nombre del proyecto es " +str(__project_name__) )
-    print("\tSi decea mantener esta ubicacion presione 'Y' ")
+    print("\t El nombre del proyecto es " +str(__project_name__) )
+    print("\t Si decea mantener esta ubicacion presione 'Y' ")
     __mantener_ruta__ = input()
     if __mantener_ruta__ == "Y" or "y":
         try:
             os.makedirs((__project_name__)+str('/aaaaaaaaaaaaaaaaaaaaaa/'))
         except FileExistsError:
             pass
-
-
-
     While(False)
 
 
 
-while(True):
-    menu()
-    opcionMenu = input("\n Opción >>>>>: ")
-    if opcionMenu == "1":
-        simple_script()
-    elif opcionMenu == "2":
-        print("")
-    elif opcionMenu == "3":
-        print("")
-    elif opcionMenu == "4":
-        print("")
-    elif opcionMenu == "5":
-        print("")
-    elif opcionMenu == "6":
-        print("")
-    elif opcionMenu == "9":
-        break
-    else:
-        print("")
-        input("Ingrese ...\npulsa una tecla para continuar")
+menu()
+opcionMenu = input("\n \t# Opción: ")
+if opcionMenu == "1":
+    simple_script()
+elif opcionMenu == "2":
+    print("")
+elif opcionMenu == "3":
+    print("")
+elif opcionMenu == "4":
+    print("")
+elif opcionMenu == "5":
+    print("")
+elif opcionMenu == "6":
+    print("")
+elif opcionMenu == "9":
+    print("salir")
+
+else:
+    print("")
+    input("Ingrese ...\npulsa una tecla para continuar")
 
 
 """ print(bcolors.HEADER + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)

@@ -32,48 +32,51 @@ x = PrettyTable()
 def menu():
 
 
-    print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
     wd = os.getcwd()
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "\tSistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}".format(path))
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" +  bcolors.ENDC)
-    print(bcolors.HEADER + "\t#")
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   1.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Python Script" + bcolors.ENDC) 
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   6.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#")
-    print(bcolors.HEADER + "\t#")
-    print(bcolors.HEADER + "\t#############################################################################################" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t#")
-    print(bcolors.HEADER + "\t#")
-    print(bcolors.HEADER + "\t#" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" +  bcolors.BOLD + bcolors.ENDC + bcolors.OKGREEN +  "\tSistema operativo detectado: " + bcolors.OKBLUE + str(my_os))
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}".format(path))
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
+    print(bcolors.HEADER + "\t###")
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   1.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Python Script" + bcolors.ENDC) 
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   6.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###")
+    print(bcolors.HEADER + "\t###")
+    print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t##")
+    print(bcolors.HEADER + "\t##")
+    print(bcolors.HEADER + "\t##" + bcolors.ENDC)
 
 
 def simple_script():
     print("\t Ha Seleccionado: Creación de estructura de proyecto para script simple")
-    __project_name__ = input("Ingrese el nombre del proyecto: ")
+    __project_name__ = input("\tI 1ngrese el nombre del proyecto: ")
     print("\t El nombre del proyecto es " +str(__project_name__) )
     print("\t Si decea mantener esta ubicacion presione 'Y' ")
     __mantener_ruta__ = input()
     if __mantener_ruta__ == "Y" or "y":
         try:
-            os.makedirs((__project_name__)+str('/aaaaaaaaaaaaaaaaaaaaaa/'))
+            os.makedirs((__project_name__)+str('/test/'))
+            os.makedirs((__project_name__)+str('/docs/'))
         except FileExistsError:
             pass
     While(False)
 
 
-
 menu()
-opcionMenu = input("\n \t# Opción: ")
+opcionMenu = input(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "\tOpcion:  " + bcolors.OKBLUE + bcolors.ENDC)
+print()
 if opcionMenu == "1":
     simple_script()
 elif opcionMenu == "2":

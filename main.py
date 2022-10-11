@@ -3,6 +3,7 @@ import os
 from prettytable import PrettyTable
 from colorama import Fore, Back, Style
 import platform
+from progress.bar import Bar
 
 
 
@@ -54,8 +55,6 @@ def menu():
     print(bcolors.HEADER + "\t###")
     print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
     print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t##")
-    print(bcolors.HEADER + "\t##")
     print(bcolors.HEADER + "\t##" + bcolors.ENDC)
 
 
@@ -67,15 +66,21 @@ def simple_script():
     __mantener_ruta__ = input()
     if __mantener_ruta__ == "Y" or "y":
         try:
-            os.makedirs((__project_name__)+str('/test/'))
-            os.makedirs((__project_name__)+str('/docs/'))
+            bar = Bar('Creando Estructura de proyecto...Espere', max=1)
+            for i in range(20):
+                os.makedirs((__project_name__)+str('/test/'))
+                os.makedirs((__project_name__)+str('/docs/'))
+                # Do some work
+                bar.next()
+            bar.finish()
+
         except FileExistsError:
             pass
     While(False)
 
 
 menu()
-opcionMenu = input(bcolors.HEADER + "\t#" +  bcolors.ENDC + bcolors.OKGREEN +  "\tOpcion:  " + bcolors.OKBLUE + bcolors.ENDC)
+opcionMenu = input(bcolors.HEADER + "\t##" +  bcolors.ENDC + bcolors.OKGREEN +  "\tOpcion:  " + bcolors.OKBLUE + bcolors.ENDC)
 print()
 if opcionMenu == "1":
     simple_script()

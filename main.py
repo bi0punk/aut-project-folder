@@ -29,6 +29,7 @@ filePath = __file__
 
 absFilePath = os.path.abspath(__file__)
 path, filename = os.path.split(absFilePath)
+print(path)
 x = PrettyTable()
 def menu():
 
@@ -45,12 +46,11 @@ def menu():
     print(bcolors.HEADER + "\t###" +  bcolors.ENDC)
     print(bcolors.HEADER + "\t###")
     print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   1.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Python Script" + bcolors.ENDC) 
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   6.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
-    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   7.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   2.- " + bcolors.ENDC +  bcolors.OKBLUE + "Simple Empty Flask Application with Virtual Environment (venv)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   3.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   4.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Basic)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   5.- " + bcolors.ENDC +  bcolors.OKBLUE + "Flask Aplication with V/e + Bootstrap v4/v5 + Login Module and Templates (Login + Sidebar and/or Navbar)" + bcolors.ENDC)
+    print(bcolors.HEADER + "\t###" + bcolors.WARNING  + "   9.- " + bcolors.ENDC +  bcolors.FAIL + "Salir" + bcolors.ENDC)
     print(bcolors.HEADER + "\t###")
     print(bcolors.HEADER + "\t###")
     print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
@@ -59,9 +59,11 @@ def menu():
 
 
 def simple_script():
-    print("\t Ha Seleccionado: Creación de estructura de proyecto para script simple")
-    __project_name__ = input("\tI 1ngrese el nombre del proyecto: ")
+
+    __project_name__ = input("\t##I 1ngrese el nombre del proyecto: ")
+    print(bcolors.HEADER + "\t##" +  bcolors.ENDC + bcolors.OKGREEN + "\tHa seleccionado : " + bcolors.ENDC + bcolors.WARNING  + "Creacion de estructura para script simple")
     print("\t El nombre del proyecto es " +str(__project_name__) )
+    print(bcolors.HEADER + "\t###" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}".format(path))
     print("\t Si decea mantener esta ubicacion presione 'Y' ")
     __mantener_ruta__ = input()
     if __mantener_ruta__ == "Y" or "y":
@@ -70,6 +72,35 @@ def simple_script():
             for i in range(20):
                 os.makedirs((__project_name__)+str('/test/'))
                 os.makedirs((__project_name__)+str('/docs/'))
+                f = open(path + "/" + __project_name__  + "/app.py","w")
+                f.write("print('Hola Mundo')")
+                f.close()
+                f = open(path + "/" + __project_name__  + "/README.MD","w")
+
+                f.write("# Foobar")
+                f.write("foobar is a Python library for dealing with word pluralization.")
+                f.write("## Installation")
+                f.write("Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.")
+                f.write("```bash")
+                f.write("pip install foobar")
+                f.write("```")
+                f.write("```python")
+                f.write("import foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+                f.write("# Foobar")
+
+
+                f.write("# Foobar")
+                f.close()
+
                 # Do some work
                 bar.next()
             bar.finish()
@@ -81,6 +112,7 @@ def simple_script():
 
 menu()
 opcionMenu = input(bcolors.HEADER + "\t##" +  bcolors.ENDC + bcolors.OKGREEN +  "\tOpcion:  " + bcolors.OKBLUE + bcolors.ENDC)
+
 print()
 if opcionMenu == "1":
     simple_script()

@@ -5,8 +5,6 @@ from colorama import Fore, Back, Style
 import platform
 from progress.bar import Bar
 
-
-
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -22,17 +20,14 @@ my_os = platform.system()
 if my_os == 'Linux':
     aa = 'Sistema Linux......Version'
 
-
 wd = os.getcwd()
 filePath = __file__
-
 
 absFilePath = os.path.abspath(__file__)
 path, filename = os.path.split(absFilePath)
 print(path)
 x = PrettyTable()
 def menu():
-
 
     print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
     print(bcolors.HEADER + "\t#####################################################################################################################" + bcolors.ENDC)
@@ -64,7 +59,7 @@ def simple_script():
     print(bcolors.HEADER + "\t##" +  bcolors.ENDC + bcolors.OKGREEN + "\tHa seleccionado : " + bcolors.ENDC + bcolors.WARNING  + "Creacion de estructura para script simple")
     print("\t El nombre del proyecto es " +str(__project_name__) )
     print(bcolors.HEADER + "\t###" +  bcolors.ENDC + bcolors.OKGREEN + "\tEntorno de Trabajo : " + bcolors.ENDC + bcolors.WARNING  + " {}".format(path))
-    print("\t Si decea mantener esta ubicacion presione 'Y' ")
+    print("\t Si decea mantener esta ubicacion presione 'Y/y' o Enter")
     __mantener_ruta__ = input()
     if __mantener_ruta__ == "Y" or "y":
         try:
@@ -77,28 +72,21 @@ def simple_script():
                 f.close()
                 f = open(path + "/" + __project_name__  + "/README.MD","w")
 
-                f.write("# Foobar")
-                f.write("foobar is a Python library for dealing with word pluralization.")
-                f.write("## Installation")
-                f.write("Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.")
-                f.write("```bash")
-                f.write("pip install foobar")
-                f.write("```")
-                f.write("```python")
-                f.write("import foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-                f.write("# Foobar")
-
-
-                f.write("# Foobar")
+                f.write("# Foobar\n")
+                f.write("foobar is a Python library for dealing with word pluralization.\n")
+                f.write("## Installation\n")
+                f.write("Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.\n")
+                f.write("```bash\n")
+                f.write("pip install foobar\n")
+                f.write("```\n")
+                f.write("```python\n")
+                f.write("import foobar\n")
+                f.write("# returns 'words'\n")
+                f.write("foobar.pluralize('word')\n")
+                f.write("## Contributing\n")
+                f.write("Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.\n")
+                f.write("## License\n")
+                f.write("[MIT](https://choosealicense.com/licenses/mit/)\n")
                 f.close()
 
                 # Do some work
